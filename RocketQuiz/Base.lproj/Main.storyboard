@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KWZ-dc-HoW">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -30,14 +30,15 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WNd-FL-7dC"/>
+                                    <segue destination="f80-3P-gQF" kind="show" id="EH7-Ei-NXC"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlU-E3-p3i">
-                                <rect key="frame" x="30" y="109" width="333" height="244"/>
+                                <rect key="frame" x="30" y="153" width="333" height="200"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.18431372549019609" green="0.31372549019607843" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1843137255" green="0.31372549020000001" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n2f-4D-qdl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2J1-cD-pQz"/>
                             <constraint firstAttribute="trailing" secondItem="hlU-E3-p3i" secondAttribute="trailing" constant="30" id="9kv-AV-LKS"/>
@@ -50,11 +51,46 @@
                             <constraint firstItem="hlU-E3-p3i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sdU-9C-81p"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JjK-VZ-BL1"/>
                     <connections>
                         <outlet property="startQuizButton" destination="n2f-4D-qdl" id="OQq-Xn-EYC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="im8-HP-FNE">
+            <objects>
+                <viewController id="f80-3P-gQF" customClass="QuestionViewController" customModule="RocketQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4q-tJ-i0I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z9H-cG-Jbl"/>
+                        <color key="backgroundColor" red="0.1843137255" green="0.31372549020000001" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N4e-Rs-Aj4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYG-GF-SZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799.2366412213739" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HC7-dh-VIr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KWZ-dc-HoW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RhU-FM-k4S">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7h2-KX-Xxi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZ3-hj-1Bg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
