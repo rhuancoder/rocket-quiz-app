@@ -19,7 +19,14 @@ class QuestionViewController: UIViewController {
         
         if userAnswerRight {
             score += 1
-            print("The user answered correctly!")
+            sender.backgroundColor = UIColor(red: 11/255, green: 161/255, blue: 53/255, alpha: 1)
+        } else {
+            sender.backgroundColor = UIColor(red: 211/255, green: 17/255, blue: 17/255, alpha: 1)
+        }
+        
+        if questionNumber < questions.count - 1 {
+            questionNumber += 1
+            Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(setQuestion), userInfo: nil, repeats: false)
         }
     }
     
@@ -40,12 +47,13 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    func setQuestion() {
+    @objc func setQuestion() {
         questionTitleLabel.text = questions[questionNumber].title
         
         for answerButton in answerButtons {
             let answerButtonTitle = questions[questionNumber].answers[answerButton.tag]
             answerButton.setTitle(answerButtonTitle, for: .normal)
+            answerButton.backgroundColor = UIColor(red: 52/255, green: 95/255, blue: 108/255, alpha: 1)
         }
     }
 }
