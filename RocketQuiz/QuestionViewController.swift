@@ -15,7 +15,12 @@ class QuestionViewController: UIViewController {
     @IBOutlet var answerButtons: [UIButton]!
     
     @IBAction func answerPressedButton(_ sender: UIButton) {
-        print(sender.tag)
+        let userAnswerRight = questions[questionNumber].correctAnswer == sender.tag
+        
+        if userAnswerRight {
+            score += 1
+            print("The user answered correctly!")
+        }
     }
     
     override func viewDidLoad() {
@@ -37,5 +42,10 @@ class QuestionViewController: UIViewController {
     
     func setQuestion() {
         questionTitleLabel.text = questions[questionNumber].title
+        
+        for answerButton in answerButtons {
+            let answerButtonTitle = questions[questionNumber].answers[answerButton.tag]
+            answerButton.setTitle(answerButtonTitle, for: .normal)
+        }
     }
 }
