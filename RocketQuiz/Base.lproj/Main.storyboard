@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RocketQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2f-4D-qdl">
-                                <rect key="frame" x="62" y="395" width="269" height="62"/>
+                                <rect key="frame" x="62" y="390" width="269" height="62"/>
                                 <color key="backgroundColor" red="0.20208802270000001" green="0.37350690279999998" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="Cxi-x6-EIY"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlU-E3-p3i">
-                                <rect key="frame" x="30" y="153" width="333" height="200"/>
+                                <rect key="frame" x="30" y="50" width="333" height="298"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -65,17 +65,17 @@
             <objects>
                 <viewController id="f80-3P-gQF" customClass="QuestionViewController" customModule="RocketQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c4q-tJ-i0I">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3L-id-L0X">
-                                <rect key="frame" x="64" y="183" width="265" height="36"/>
+                                <rect key="frame" x="64" y="80" width="265" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVa-7s-W3d">
-                                <rect key="frame" x="64" y="291" width="265" height="62"/>
+                                <rect key="frame" x="64" y="188" width="265" height="62"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.37254901959999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="zif-hR-x8L"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4e-ES-KYB">
-                                <rect key="frame" x="64" y="385" width="265" height="62"/>
+                                <rect key="frame" x="64" y="282" width="265" height="62"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.37254901959999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="s1B-no-Qjs"/>
@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-aN-Ud4">
-                                <rect key="frame" x="64" y="479" width="265" height="62"/>
+                                <rect key="frame" x="64" y="376" width="265" height="62"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.37254901959999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="xXt-25-tCa"/>
@@ -143,11 +143,82 @@
                         <outletCollection property="answerButtons" destination="NVa-7s-W3d" collectionClass="NSMutableArray" id="kHw-pg-CHz"/>
                         <outletCollection property="answerButtons" destination="w4e-ES-KYB" collectionClass="NSMutableArray" id="TaT-Hc-e10"/>
                         <outletCollection property="answerButtons" destination="j1B-aN-Ud4" collectionClass="NSMutableArray" id="AGK-r7-qJw"/>
+                        <segue destination="kGC-sA-254" kind="show" identifier="goToScoreView" id="oXK-oT-SBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYG-GF-SZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1799.2366412213739" y="3.5211267605633805"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="V3B-cw-JUx">
+            <objects>
+                <viewController id="kGC-sA-254" customClass="ScoreViewController" customModule="RocketQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qB5-8E-DIy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You finished the Rocket Quiz!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM1-Wg-VzI">
+                                <rect key="frame" x="64" y="112" width="265" height="76.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You got 2 out of 10 questions right" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3o-Db-6y7">
+                                <rect key="frame" x="64" y="260.66666666666669" width="265" height="76.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final percentage: 20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsq-2I-RFr">
+                                <rect key="frame" x="64" y="409.33333333333331" width="265" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8d-iE-nVJ">
+                                <rect key="frame" x="64" y="507.66666666666674" width="265" height="62"/>
+                                <color key="backgroundColor" red="0.20208802270000001" green="0.37350690279999998" blue="0.43535445430000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="z5T-W2-rKz"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Restart Quiz">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CeB-tI-9X1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ecd-D4-JC0"/>
+                        <color key="backgroundColor" red="0.1843137255" green="0.31372549020000001" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sM1-Wg-VzI" firstAttribute="leading" secondItem="ecd-D4-JC0" secondAttribute="leading" constant="64" id="1qQ-2d-fuR"/>
+                            <constraint firstItem="Wsq-2I-RFr" firstAttribute="leading" secondItem="ecd-D4-JC0" secondAttribute="leading" constant="64" id="5MG-ZU-1z1"/>
+                            <constraint firstItem="ecd-D4-JC0" firstAttribute="trailing" secondItem="O8d-iE-nVJ" secondAttribute="trailing" constant="64" id="6M3-Pd-SPq"/>
+                            <constraint firstAttribute="trailing" secondItem="R3o-Db-6y7" secondAttribute="trailing" constant="64" id="MOa-7e-DeJ"/>
+                            <constraint firstItem="O8d-iE-nVJ" firstAttribute="top" secondItem="Wsq-2I-RFr" secondAttribute="bottom" constant="72" id="P19-az-imH"/>
+                            <constraint firstItem="ecd-D4-JC0" firstAttribute="trailing" secondItem="Wsq-2I-RFr" secondAttribute="trailing" constant="64" id="WFq-WG-X3J"/>
+                            <constraint firstItem="O8d-iE-nVJ" firstAttribute="leading" secondItem="ecd-D4-JC0" secondAttribute="leading" constant="64" id="hbq-Ta-vYT"/>
+                            <constraint firstItem="R3o-Db-6y7" firstAttribute="top" secondItem="sM1-Wg-VzI" secondAttribute="bottom" constant="72" id="kJL-hO-WbU"/>
+                            <constraint firstItem="R3o-Db-6y7" firstAttribute="leading" secondItem="qB5-8E-DIy" secondAttribute="leading" constant="64" id="mlr-Mn-f0d"/>
+                            <constraint firstItem="Wsq-2I-RFr" firstAttribute="top" secondItem="R3o-Db-6y7" secondAttribute="bottom" constant="72" id="pgg-rg-gaR"/>
+                            <constraint firstAttribute="trailing" secondItem="sM1-Wg-VzI" secondAttribute="trailing" constant="64" id="qMK-eB-rCM"/>
+                            <constraint firstItem="sM1-Wg-VzI" firstAttribute="top" secondItem="ecd-D4-JC0" secondAttribute="top" constant="112" id="t5f-G7-gbQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="McG-H4-tH7"/>
+                    <connections>
+                        <outlet property="restartQuizButton" destination="O8d-iE-nVJ" id="XlE-mD-hYS"/>
+                        <outlet property="scorePercentageLabel" destination="Wsq-2I-RFr" id="wbI-ft-vQ2"/>
+                        <outlet property="scoreResultLabel" destination="R3o-Db-6y7" id="h7s-ia-ojZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4WF-ZF-yYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HC7-dh-VIr">
@@ -168,6 +239,9 @@
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CeB-tI-9X1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="1080" height="1080"/>
         <systemColor name="systemBackgroundColor">
