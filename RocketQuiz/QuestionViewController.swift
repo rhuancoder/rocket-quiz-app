@@ -27,7 +27,13 @@ class QuestionViewController: UIViewController {
         if questionNumber < questions.count - 1 {
             questionNumber += 1
             Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(setQuestion), userInfo: nil, repeats: false)
+        } else {
+            navigateToScoreView()
         }
+    }
+    
+    func navigateToScoreView() {
+        performSegue(withIdentifier: "goToScoreView", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -55,5 +61,12 @@ class QuestionViewController: UIViewController {
             answerButton.setTitle(answerButtonTitle, for: .normal)
             answerButton.backgroundColor = UIColor(red: 52/255, green: 95/255, blue: 108/255, alpha: 1)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let scoreViewController = segue.destination as? ScoreViewController
+        else { return }
+        
+        scoreViewController.score = score
     }
 }
