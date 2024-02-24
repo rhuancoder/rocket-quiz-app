@@ -62,18 +62,34 @@
 		A75A284A2B7D8DA3002B4897 /* RocketQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				A78D4CA72B896904005274FB /* Models */,
+				A78D4CA62B8968CE005274FB /* ViewController */,
 				A75A284B2B7D8DA3002B4897 /* AppDelegate.swift */,
 				A75A284D2B7D8DA3002B4897 /* SceneDelegate.swift */,
-				A75A284F2B7D8DA3002B4897 /* ViewController.swift */,
-				A7B4B31C2B81657D0051865E /* QuestionViewController.swift */,
-				A7830D0A2B82BA750011B697 /* Question.swift */,
-				A78D4CA42B895A5D005274FB /* ScoreViewController.swift */,
 				A75A28512B7D8DA3002B4897 /* Main.storyboard */,
 				A75A28542B7D8DA4002B4897 /* Assets.xcassets */,
 				A75A28562B7D8DA4002B4897 /* LaunchScreen.storyboard */,
 				A75A28592B7D8DA4002B4897 /* Info.plist */,
 			);
 			path = RocketQuiz;
+			sourceTree = "<group>";
+		};
+		A78D4CA62B8968CE005274FB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A7B4B31C2B81657D0051865E /* QuestionViewController.swift */,
+				A78D4CA42B895A5D005274FB /* ScoreViewController.swift */,
+				A75A284F2B7D8DA3002B4897 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A78D4CA72B896904005274FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7830D0A2B82BA750011B697 /* Question.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
